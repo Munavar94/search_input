@@ -39,7 +39,9 @@ function App() {
           {
             data
               ?.sort((a, b) => b.id - a.id) // for descending
+              // ?.sort((a, b) => a.id - b.id)  // for ascending 
               ?.filter(item => item.name.toLowerCase().includes(search.toLowerCase()))
+              // ?.filter(item => item.username.toLowerCase().includes(search.toLowerCase()))
               ?.map((item) => (
                 <tr key={item.id}>
                   <td>{item.id}</td>
